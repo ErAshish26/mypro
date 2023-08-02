@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form name="myform" action="insert.php" method="post" onsubmit="return validateform()">
+        
+    
+        <div class="container">
+
+        <h1 class="a"> Register here!</h1><hr>
+        <strong>Name</strong><br><input type="text" name="name" id="name" placeholder="Enter your Name" ><br><br>
+      
+        <strong>Email</strong><br><input type="text" name="email" id="email" placeholder="Enter your MailId"><br><br>
+        <strong>Phone</strong><br> <input type="tel" name="phone" id="phone" placeholder="Enter your Phone" maxlength="10" ><br><br>
+        <strong>Password</strong> <br> <input type="password" name="password" id="password" placeholder="Enter Password" ><br><br>
+        <strong>Confirm Password</strong><br><input type="password" name="password1" id="password1" placeholder="Enter Confirm Password" ><br><br><hr>
+        <input type="Submit" value="Register" class="btn">
+        <div class="signin">
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+       
+    </form>
+</div>
+<script>
+     function validateform(){
+       let x = document.forms["myform"]["name"].value;
+       if(x ==""){
+        alert("name cant't be blank");
+        return false;
+       }
+       let y = document.forms["myform"]["email"].value;
+       if(y =="" ){
+        alert("Email cant't be blank");
+        return false;
+       }
+       let c = document.forms["myform"]["phone"].value;
+       if(c =="" ){
+        alert("phone cant't be blank");
+        return false;
+       }
+       let z = document.forms["myform"]["password"].value;
+       if(z ==""){
+        alert("Password  cant't be blank");
+        return false;
+       }
+       let d = document.forms["myform"]["password1"].value
+       if(z!=d){
+        alert("Password and Confirm Should be same");
+        return false;
+    }
+}
+    
+     
+</script>
+</body>
+</html>

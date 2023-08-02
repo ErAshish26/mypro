@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form name="myform" action="action.php" method="post" onsubmit=" return validateform()">
+        
+    
+        <div class="container">
+
+        <h1 class="a"> Login here!</h1><hr>
+        <strong>Username</strong><br><input type="text" name="username" id="username" placeholder="Enter  Username"><br><br>
+      
+       
+        <strong>Phone</strong><br> <input type="tel" name="phone" id="phone" placeholder="Enter your Phone" maxlength="10" ><br><br>
+        <strong>Password</strong> <br> <input type="password" name="password" id="password" placeholder="Enter Password" ><br><br><hr>
+        
+        <input type="Submit" value="Login" class="btn">
+        <div class="signin">
+            <p>Create an account? <a href="register.html">Register</a></p>
+        </div>
+       
+    </form>
+</div>
+<script>
+     function validateform(){
+       let x = document.forms["myform"]["Username"].value;
+       if(x ==""){
+        alert("Username cant't be blank");
+        return false;
+       }
+       let y = document.forms["myform"]["phone"].value;
+       if(y =="" ){
+        alert("Phone no. cant't be blank");
+        return false;
+       }
+       let z = document.forms["myform"]["password"].value;
+       if(z ==""){
+        alert("Password  cant't be blank");
+        return false;
+       }
+    }
+</script>
+</body>
+</html>
